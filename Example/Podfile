@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'IAPHelperLV_Example' do
+  pod 'IAPHelperLV', :path => '../'
+
+  target 'IAPHelperLV_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
