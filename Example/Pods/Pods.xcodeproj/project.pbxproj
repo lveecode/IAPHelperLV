@@ -10,7 +10,7 @@
 		0D1CB22A7D310C141F35BE043E9BB626 /* IAPHelperLV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A6EE3D76D5AF7569B9E61DDFF591F9 /* IAPHelperLV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C5E1EA5BCA1979A0C834218D8E50A80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		410CA3455FC591D0C74DDFF7ABCC7C40 /* Pods-IAPHelperLV_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36470FED0AE7573BA0549743F9EB6E02 /* Pods-IAPHelperLV_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		58CB7CDD2344D7CE00A5B3D6 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CB7CDC2344D7CD00A5B3D6 /* IAPHelper.swift */; };
+		58CB7CE02344E5DC00A5B3D6 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CB7CDF2344E5DC00A5B3D6 /* IAPHelper.swift */; };
 		5F0E5EBF32ECBFB0A0C0D07846FFD223 /* Pods-IAPHelperLV_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5013958EBB9979284D4CE4B8B40B07 /* Pods-IAPHelperLV_Example-dummy.m */; };
 		5FB7D5749B796C7F1ADBBAFF70E2DF24 /* Pods-IAPHelperLV_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D628A2D04300CEAEC53CE828E351F7 /* Pods-IAPHelperLV_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70140EE4DFB43873EC516D50714A5352 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -51,7 +51,7 @@
 		476095928308291D31807602518B0D56 /* IAPHelperLV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IAPHelperLV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		496E9BA8F3ED293F0D67862AC2D50E1C /* IAPHelperLV.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IAPHelperLV.xcconfig; sourceTree = "<group>"; };
 		4DD17A30AE94667D3A3C6FC05258F65A /* Pods-IAPHelperLV_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IAPHelperLV_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		58CB7CDC2344D7CD00A5B3D6 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		58CB7CDF2344E5DC00A5B3D6 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IAPHelper.swift; path = IAPHelperLV/Classes/IAPHelper.swift; sourceTree = "<group>"; };
 		642D93C8619AB8053D8C77E898F4E6C2 /* Pods-IAPHelperLV_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IAPHelperLV_Example-Info.plist"; sourceTree = "<group>"; };
 		64B9C911B81FE54DC39F1C25838BE3C7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6A5013958EBB9979284D4CE4B8B40B07 /* Pods-IAPHelperLV_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IAPHelperLV_Example-dummy.m"; sourceTree = "<group>"; };
@@ -132,14 +132,6 @@
 			path = "Target Support Files/Pods-IAPHelperLV_Example";
 			sourceTree = "<group>";
 		};
-		58CB7CDE2344E4A600A5B3D6 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				58CB7CDC2344D7CD00A5B3D6 /* IAPHelper.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		818052FAECAA2D87B473862EBC9D0B9E /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +143,7 @@
 		B5610F99E5927F24DCB6E1FB46FC8E27 /* IAPHelperLV */ = {
 			isa = PBXGroup;
 			children = (
-				58CB7CDE2344E4A600A5B3D6 /* Classes */,
+				58CB7CDF2344E5DC00A5B3D6 /* IAPHelper.swift */,
 				EF154F8E7CF9B9B8ECFC6E7FBDAEECAB /* Pod */,
 				DFBC1D2AEE7462B721EB60C6E8D8921F /* Support Files */,
 			);
@@ -323,6 +315,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					B825C5CFF6559CD119A2A7033629185F = {
+						LastSwiftMigration = 1100;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -380,8 +377,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58CB7CE02344E5DC00A5B3D6 /* IAPHelper.swift in Sources */,
 				7B7760AF04485F10568BFCF43C132494 /* IAPHelperLV-dummy.m in Sources */,
-				58CB7CDD2344D7CE00A5B3D6 /* IAPHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 496E9BA8F3ED293F0D67862AC2D50E1C /* IAPHelperLV.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -581,6 +579,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 496E9BA8F3ED293F0D67862AC2D50E1C /* IAPHelperLV.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -601,6 +600,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
