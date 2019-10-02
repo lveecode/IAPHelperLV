@@ -132,6 +132,14 @@
 			path = "Target Support Files/Pods-IAPHelperLV_Example";
 			sourceTree = "<group>";
 		};
+		58CB7CDE2344E4A600A5B3D6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				58CB7CDC2344D7CD00A5B3D6 /* IAPHelper.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		818052FAECAA2D87B473862EBC9D0B9E /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +151,7 @@
 		B5610F99E5927F24DCB6E1FB46FC8E27 /* IAPHelperLV */ = {
 			isa = PBXGroup;
 			children = (
-				58CB7CDC2344D7CD00A5B3D6 /* IAPHelper.swift */,
+				58CB7CDE2344E4A600A5B3D6 /* Classes */,
 				EF154F8E7CF9B9B8ECFC6E7FBDAEECAB /* Pod */,
 				DFBC1D2AEE7462B721EB60C6E8D8921F /* Support Files */,
 			);
