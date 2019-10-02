@@ -2,10 +2,10 @@
 import StoreKit
 
 public extension Notification.Name {
-    static let IAPHelperPurchaseNotification = Notification.Name("IAPHelperPurchaseNotification")
+    static let IAPHelperLVPurchaseNotification = Notification.Name("IAPHelperLVPurchaseNotification")
 }
 
-extension IAPHelper {
+extension IAPHelperLV {
     @objc public static func runOnMainThreadWithoutDeadlocking(_ block: (()->Void)) {
         // Run block on main thread without deadlocking.
         if Thread.isMainThread {
@@ -19,9 +19,9 @@ extension IAPHelper {
 }
 
 
-open class IAPHelper: NSObject  {
+open class IAPHelperLV: NSObject  {
     
-    public static let shared = IAPHelper()
+    public static let shared = IAPHelperLV()
     
     public var loggingEnabled: Bool = true
     private var purchasedProductIdentifiers: Set<String> = []
@@ -53,7 +53,7 @@ open class IAPHelper: NSObject  {
     
     public func buyProduct(_ productId: String, completionHandler: @escaping (_ success: Bool, _ canceled: Bool, _ errorMessage: String?) -> Void) {
         
-        if !IAPHelper.canMakePayments() {
+        if !IAPHelperLV.canMakePayments() {
             if loggingEnabled { print("[IAPHelper]: Can't make payments") }
             completionHandler(false, false, "Can't make payments")
             return
@@ -95,7 +95,7 @@ open class IAPHelper: NSObject  {
     public func requestProducts(_ completionHandler: @escaping (_ success: Bool) -> Void) {
         productsRequest?.cancel()
         productsRequestCompletionHandler = { (success) in
-            IAPHelper.runOnMainThreadWithoutDeadlocking {
+            IAPHelperLV.runOnMainThreadWithoutDeadlocking {
                 completionHandler(success)
             } }
         
@@ -110,7 +110,7 @@ open class IAPHelper: NSObject  {
         if loggingEnabled { print("[IAPHelper]: Buying \(product.productIdentifier)") }
         
         self.purchaseCompletionHandler = { (success, cancelled, errorMessage) in
-            IAPHelper.runOnMainThreadWithoutDeadlocking {
+            IAPHelperLV.runOnMainThreadWithoutDeadlocking {
                 completionHandler(success, cancelled, errorMessage)
             } }
         let payment = SKPayment(product: product)
@@ -123,7 +123,7 @@ open class IAPHelper: NSObject  {
     
     public func restorePurchases(_ completionHandler: @escaping (_ success: Bool) -> Void ) {
         self.purchaseCompletionHandler = { (success, cancelled, errorMessage) in
-            IAPHelper.runOnMainThreadWithoutDeadlocking {
+            IAPHelperLV.runOnMainThreadWithoutDeadlocking {
                 completionHandler(success)
             }
         }
@@ -133,7 +133,7 @@ open class IAPHelper: NSObject  {
 
 // MARK: - SKProductsRequestDelegate
 
-extension IAPHelper: SKProductsRequestDelegate {
+extension IAPHelperLV: SKProductsRequestDelegate {
     
     public func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         self.products = response.products
@@ -166,7 +166,7 @@ extension IAPHelper: SKProductsRequestDelegate {
 
 // MARK: - SKPaymentTransactionObserver
 
-extension IAPHelper: SKPaymentTransactionObserver {
+extension IAPHelperLV: SKPaymentTransactionObserver {
     
     public func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
@@ -243,6 +243,6 @@ extension IAPHelper: SKPaymentTransactionObserver {
         
         purchasedProductIdentifiers.insert(identifier)
         UserDefaults.standard.set(true, forKey: identifier)
-        NotificationCenter.default.post(name: .IAPHelperPurchaseNotification, object: identifier)
+        NotificationCenter.default.post(name: .IAPHelperLVPurchaseNotification, object: identifier)
     }
 }
