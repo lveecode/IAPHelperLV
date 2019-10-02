@@ -10,7 +10,7 @@
 		0D1CB22A7D310C141F35BE043E9BB626 /* IAPHelperLV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A6EE3D76D5AF7569B9E61DDFF591F9 /* IAPHelperLV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1C5E1EA5BCA1979A0C834218D8E50A80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		410CA3455FC591D0C74DDFF7ABCC7C40 /* Pods-IAPHelperLV_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 36470FED0AE7573BA0549743F9EB6E02 /* Pods-IAPHelperLV_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5B3F888602F79864F48912AB4C7233A6 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1868CB3A92A6728E8C1E41216864199 /* ReplaceMe.swift */; };
+		58CB7CDD2344D7CE00A5B3D6 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CB7CDC2344D7CD00A5B3D6 /* IAPHelper.swift */; };
 		5F0E5EBF32ECBFB0A0C0D07846FFD223 /* Pods-IAPHelperLV_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A5013958EBB9979284D4CE4B8B40B07 /* Pods-IAPHelperLV_Example-dummy.m */; };
 		5FB7D5749B796C7F1ADBBAFF70E2DF24 /* Pods-IAPHelperLV_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D628A2D04300CEAEC53CE828E351F7 /* Pods-IAPHelperLV_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70140EE4DFB43873EC516D50714A5352 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -45,25 +45,25 @@
 		2D14C3043662BDC71C8C352532ECF7C9 /* Pods-IAPHelperLV_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IAPHelperLV_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		31D628A2D04300CEAEC53CE828E351F7 /* Pods-IAPHelperLV_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IAPHelperLV_Example-umbrella.h"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		326AC781FA4251446888BE81FACB6331 /* IAPHelperLV.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = IAPHelperLV.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		326AC781FA4251446888BE81FACB6331 /* IAPHelperLV.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = IAPHelperLV.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		36470FED0AE7573BA0549743F9EB6E02 /* Pods-IAPHelperLV_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-IAPHelperLV_Tests-umbrella.h"; sourceTree = "<group>"; };
 		3B8BDAAEBABA7DDEE0F1A7D0CE473801 /* Pods-IAPHelperLV_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IAPHelperLV_Example.modulemap"; sourceTree = "<group>"; };
-		476095928308291D31807602518B0D56 /* IAPHelperLV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = IAPHelperLV.framework; path = IAPHelperLV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		476095928308291D31807602518B0D56 /* IAPHelperLV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IAPHelperLV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		496E9BA8F3ED293F0D67862AC2D50E1C /* IAPHelperLV.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IAPHelperLV.xcconfig; sourceTree = "<group>"; };
 		4DD17A30AE94667D3A3C6FC05258F65A /* Pods-IAPHelperLV_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IAPHelperLV_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		58CB7CDC2344D7CD00A5B3D6 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		642D93C8619AB8053D8C77E898F4E6C2 /* Pods-IAPHelperLV_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IAPHelperLV_Example-Info.plist"; sourceTree = "<group>"; };
-		64B9C911B81FE54DC39F1C25838BE3C7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		64B9C911B81FE54DC39F1C25838BE3C7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		6A5013958EBB9979284D4CE4B8B40B07 /* Pods-IAPHelperLV_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-IAPHelperLV_Example-dummy.m"; sourceTree = "<group>"; };
 		73135089FE2F41612B833FFD36CF51CB /* IAPHelperLV-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IAPHelperLV-prefix.pch"; sourceTree = "<group>"; };
 		736BCC7C41902DBBF20AEBCE2CC8265E /* Pods-IAPHelperLV_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IAPHelperLV_Tests.modulemap"; sourceTree = "<group>"; };
 		87A74824EF3D29920FF75D26E49835F5 /* Pods-IAPHelperLV_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-IAPHelperLV_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		92163748EDC22AD907A5F13D8F268058 /* IAPHelperLV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IAPHelperLV.modulemap; sourceTree = "<group>"; };
-		93EFA5FA42F92B3EA4A5594D9CBB8427 /* Pods_IAPHelperLV_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IAPHelperLV_Tests.framework; path = "Pods-IAPHelperLV_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A779E14BBD90A594659CEA442C12FBB6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		93EFA5FA42F92B3EA4A5594D9CBB8427 /* Pods_IAPHelperLV_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IAPHelperLV_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A779E14BBD90A594659CEA442C12FBB6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AA16B3B515E3A6AF8307FE1F646CE0E7 /* IAPHelperLV-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "IAPHelperLV-Info.plist"; sourceTree = "<group>"; };
-		ABDE7350B269BCEC8CAEC5265C18EC61 /* Pods_IAPHelperLV_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_IAPHelperLV_Example.framework; path = "Pods-IAPHelperLV_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1868CB3A92A6728E8C1E41216864199 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = IAPHelperLV/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		ABDE7350B269BCEC8CAEC5265C18EC61 /* Pods_IAPHelperLV_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IAPHelperLV_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27A4522DC22D058C90C12FF84877FE1 /* Pods-IAPHelperLV_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-IAPHelperLV_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B5728341ABBAA29E39A480F547AD7642 /* IAPHelperLV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IAPHelperLV-dummy.m"; sourceTree = "<group>"; };
 		BDF203B3AEAB52CE0AF0D2770A1A6E12 /* Pods-IAPHelperLV_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-IAPHelperLV_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		B5610F99E5927F24DCB6E1FB46FC8E27 /* IAPHelperLV */ = {
 			isa = PBXGroup;
 			children = (
-				B1868CB3A92A6728E8C1E41216864199 /* ReplaceMe.swift */,
+				58CB7CDC2344D7CD00A5B3D6 /* IAPHelper.swift */,
 				EF154F8E7CF9B9B8ECFC6E7FBDAEECAB /* Pod */,
 				DFBC1D2AEE7462B721EB60C6E8D8921F /* Support Files */,
 			);
@@ -373,7 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B7760AF04485F10568BFCF43C132494 /* IAPHelperLV-dummy.m in Sources */,
-				5B3F888602F79864F48912AB4C7233A6 /* ReplaceMe.swift in Sources */,
+				58CB7CDD2344D7CE00A5B3D6 /* IAPHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,8 +653,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
