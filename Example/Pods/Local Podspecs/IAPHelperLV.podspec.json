@@ -1,0 +1,22 @@
+{
+  "name": "IAPHelperLV",
+  "version": "0.1.0",
+  "summary": "A short description of IAPHelperLV.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/LVeecode/IAPHelperLV",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "LVeecode": "lveecode@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/LVeecode/IAPHelperLV.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "IAPHelperLV/Classes/**/*"
+}
