@@ -1,7 +1,7 @@
 
 import StoreKit
 
-extension Notification.Name {
+public extension Notification.Name {
     static let IAPHelperPurchaseNotification = Notification.Name("IAPHelperPurchaseNotification")
 }
 
@@ -21,27 +21,26 @@ extension IAPHelper {
 
 open class IAPHelper: NSObject  {
     
-    static let shared = IAPHelper()
+    public static let shared = IAPHelper()
     
-    var loggingEnabled: Bool = true
+    public var loggingEnabled: Bool = true
     private var purchasedProductIdentifiers: Set<String> = []
     private var productsRequest: SKProductsRequest?
     private var productsRequestCompletionHandler: ((_ success: Bool) -> Void)? = nil
     private var purchaseCompletionHandler: ((_ success: Bool, _ canceled: Bool, _ errorMessage: String?) -> Void)? = nil
     
-    var products: [SKProduct]? = nil
-    var loadedProducts: Bool = false
+    public var products: [SKProduct]? = nil
+    public var loadedProducts: Bool = false
     
-    // Overridables
-    static var productIds: Set<String> {
-        get { return [] }
-    }
+    var productIds: Set<String> = []
     
-    func setup() {
+    public func setup(productIds: Set<String>) {
+        
+        self.productIds = productIds
         
         // Track which items have already been purchased
         // according to our UserDefaults
-        for productIdentifier in IAPHelper.productIds {
+        for productIdentifier in productIds {
             let purchased = UserDefaults.standard.bool(forKey: productIdentifier)
             if purchased {
                 purchasedProductIdentifiers.insert(productIdentifier)
@@ -100,7 +99,7 @@ open class IAPHelper: NSObject  {
                 completionHandler(success)
             } }
         
-        productsRequest = SKProductsRequest(productIdentifiers: IAPHelper.productIds)
+        productsRequest = SKProductsRequest(productIdentifiers: productIds)
         productsRequest!.delegate = self
         productsRequest!.start()
     }
